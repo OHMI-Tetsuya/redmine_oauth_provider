@@ -1,8 +1,8 @@
 class OauthClientsController < ApplicationController
   unloadable
 
-  before_filter :get_user
-  before_filter :get_client_application, :only => [:show, :edit, :update, :destroy]
+  before_action :get_user
+  before_action :get_client_application, :only => [:show, :edit, :update, :destroy]
 
   def index
     @client_applications = @user.client_applications
