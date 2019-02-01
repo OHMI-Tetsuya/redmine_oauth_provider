@@ -1,10 +1,11 @@
 require 'oauth/controllers/provider_controller'
 class OauthController < ApplicationController
   unloadable
-  skip_filter :check_if_login_required
+  # skip_filter :check_if_login_required
+  skip_before_action :check_if_login_required
   include OAuth::Controllers::ProviderController
 
-  before_filter :login_or_oauth_required, :only => [:user_info]
+  before_action :login_or_oauth_required, :only => [:user_info]
 
   def logged_in?
     User.current.logged?
@@ -37,9 +38,10 @@ class OauthController < ApplicationController
     start_user_session(user)
   end
 
-  def authorize_with_allow
+  #def authorize_with_allow
+  def authorize
     params[:authorize] = '1' if params[:allow]
-    authorize_without_allow
+    super
   end
-  alias_method_chain :authorize, :allow
+  # alias_method_chain :authorize, :allow
 end
