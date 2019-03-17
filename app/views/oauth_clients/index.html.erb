@@ -1,9 +1,11 @@
 <h1><%= l(:oauth_client_applications) %></h1>
 <% unless @client_applications.empty? %>
+<%= link_to l(:oauth_register_application), { :action => :new }, :class => "icon icon-add" %>
   <table class="list oauth-clients">
     <thead>
       <tr>
         <th><%= l(:field_name) %></th>
+        <th><%= l(:oauth_callback_url) %></th>
         <th></th>
         <th></th>
       </tr>
@@ -12,6 +14,7 @@
       <% @client_applications.each do |client|%>
         <tr>
           <td><%= link_to client.name, oauth_client_path(client) %></td>
+          <td><%= client.callback_url %></td>
           <td><%= link_to l(:button_edit), edit_oauth_client_path(client), :class => "icon icon-edit" %></td>
           <td><%= link_to l(:button_delete), oauth_client_path(client), :confirm => l(:text_are_you_sure), :method => :delete, :class => "icon icon-del" %></td>
         </tr>

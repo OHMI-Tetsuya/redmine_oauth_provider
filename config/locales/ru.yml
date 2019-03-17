@@ -1,0 +1,26 @@
+# Russian strings go here for Rails i18n
+ru:
+  field_support_url: Support URL
+  field_callback_url: Callback URL
+  oauth_allow: "Разрешить"
+  oauth_deny: "Запретить"
+  oauth_authorize_tilte:  Разрешите доступ к вашей учетной записи
+  oauth_authorize_comment: Вы хотите разрешить доступ следующему приложению к вашей учетной записи?
+  oauth_deny_message: Вы отклонили этот запрос
+  oauth_client_applications: OAuth Клиент Приложения
+  oauth_main_application_url: Главный URL приложения
+  oauth_callback_url: Callback URL
+  oauth_support_url: Support URL
+  oauth_edit_application: Редактировать ваше приложение
+  oauth_register_application: Добавить новое приложение
+  oauth_detail: OAuth детали для %{name}
+  oauth_consumer_key: Consumer Key
+  oauth_consumer_secret: Consumer Secret
+  oauth_request_token_url: Request Token URL
+  oauth_access_token_url: Access Token URL
+  oauth_authorize_url: Authorize URL
+
+  "Registered the information successfully": "Зарегистрировано успешно"
+  "Updated the client information successfully": "Клиентская информация обновлена успешно"
+  "Destroyed the client application registration": "Регистрационные данные клиентского приложения удалены"
+  "Wrong application id": "Неверный id приложения"

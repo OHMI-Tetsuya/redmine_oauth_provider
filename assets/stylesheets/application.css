@@ -1,3 +1,4 @@
 .list.oauth-clients {
-  width: 400px;
+  width: 900px;
 }
+#admin-menu a.oauth-clients { background-image: url(../images/oauth_clients.png);}
