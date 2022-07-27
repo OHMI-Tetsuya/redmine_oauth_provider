@@ -19,11 +19,11 @@ end
 
 Redmine::Plugin.register :redmine_oauth_provider do
   name 'Redmine Oauth Provider plugin'
-  author 'Jana Dvořáková'
+  author 'O-MI Tetsuya'
   description 'Oauth Provider plugin for Redmine'
   version '0.0.5'
-  url 'https://github.com/Virtualmaster/redmine-oauth-provider'
-  author_url 'http://www.jana4u.net/'
+  url 'https://github.com/OHMI-Tetsuya/redmine_oauth_provider'
+  author_url 'https://github.com/OHMI-Tetsuya'
 
 #  menu :admin_menu, :oauth_clients, { :controller => 'oauth_clients', :action => 'index' }, :caption => :oauth_client_applications
   menu :admin_menu, 'icon oauth_clients', { :controller => 'oauth_clients', :action => 'index' }, :caption => :oauth_client_applications
